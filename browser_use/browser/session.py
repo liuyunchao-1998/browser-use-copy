@@ -1610,7 +1610,7 @@ class BrowserSession(BaseModel):
 			# 		)
 			# 	)
 
-			screenshot_b64 = await self.take_screenshot()
+			# screenshot_b64 = await self.take_screenshot()
 			pixels_above, pixels_below = await self.get_scroll_info(page)
 
 			self.browser_state_summary = BrowserStateSummary(
@@ -1619,7 +1619,7 @@ class BrowserSession(BaseModel):
 				url=page.url,
 				title=await page.title(),
 				tabs=tabs_info,
-				screenshot=screenshot_b64,
+				# screenshot=screenshot_b64,
 				pixels_above=pixels_above,
 				pixels_below=pixels_below,
 			)
