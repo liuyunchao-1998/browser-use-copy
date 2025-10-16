@@ -1743,11 +1743,11 @@ class Agent(Generic[Context]):
 
 		# playwright browser is always immediately killed by the first Ctrl+C (no way to stop that)
 		# so we need to restart the browser if user wants to continue
-		if self.browser:
-			logger.info('🌎 Restarting/reconnecting to browser...')
-			loop = asyncio.get_event_loop()
-			loop.create_task(self.browser._init())
-			loop.create_task(asyncio.sleep(5))
+		# if self.browser:
+		# 	logger.info('🌎 Restarting/reconnecting to browser...')
+		# 	loop = asyncio.get_event_loop()
+		# 	loop.create_task(self.browser._init())
+		# 	loop.create_task(asyncio.sleep(5))
 
 	def stop(self) -> None:
 		"""Stop the agent"""
